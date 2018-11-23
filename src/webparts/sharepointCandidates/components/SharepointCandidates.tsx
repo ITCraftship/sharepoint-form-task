@@ -21,7 +21,6 @@ export default class SharepointCandidates extends React.Component<ISharepointCan
             </div>
           </div>
         </div>
-        <div id="spListContainer" ></div>
       </div>
     );
   }

@@ -1,4 +1,19 @@
-import { IContactList } from "./service.interface";
+import { ISContacList, IContactList } from "./service.interface";
+
+export default class MockHttpCompanyClientList {
+  private static _items: ISContacList[] = [
+    {Title: 'ITCrasfhip',  CompanyName: 'ITCrasfhip' },
+    {Title: 'Evici', CompanyName: 'Evici' },
+  ];
+
+
+  public static get(): Promise<ISContacList[]> {
+    return new Promise<ISContacList[]>((resolve) => {
+      resolve(MockHttpCompanyClientList._items)
+    });
+  }
+}
+
 
 export class MockHttpClientList {
   private static _items: IContactList[] = [

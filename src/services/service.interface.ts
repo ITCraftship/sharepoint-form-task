@@ -2,9 +2,9 @@ export interface ISPLists<T> {
   value: T[];
 }
 
-export interface ISPList {
+export interface ISContacList {
   Title: string;
-  Id: string;
+  CompanyName: string;
 }
 
 export interface IContactList {
