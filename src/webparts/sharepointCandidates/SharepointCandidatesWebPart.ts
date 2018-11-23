@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { Version, Environment, EnvironmentType } from '@microsoft/sp-core-library';
+import { Version } from '@microsoft/sp-core-library';
 import {
   BaseClientSideWebPart,
   IPropertyPaneConfiguration,
@@ -13,12 +13,6 @@ import {
 import * as strings from 'SharepointCandidatesWebPartStrings';
 import SharepointCandidates from './components/SharepointCandidates';
 import { ISharepointCandidatesProps } from './components/ISharepointCandidatesProps';
-import MockHttpClient from '../../../lib/webparts/sharepointCandidates/mockHttpClient';
-import { ISPLists, ISPList } from '../../../lib/webparts/sharepointCandidates/components/ISharepointCandidatesProps';
-import { SPHttpClient, SPHttpClientResponse } from '@microsoft/sp-http';
-import { SharePointAPI } from '../../services/sharefile-api';
-// import { SharePointAPI } from '../../services/sharefile-api';
-console.log(SharePointAPI);
 
 export interface ISharepointCandidatesWebPartProps extends ISharepointCandidatesProps {}
 
@@ -29,38 +23,8 @@ const styles = {
 };
 
 export default class SharepointCandidatesWebPart extends BaseClientSideWebPart<ISharepointCandidatesWebPartProps> {
-  private shareApi: SharePointAPI;
-
-  initialize() {
-    this.shareApi = new SharePointAPI(this.context);
-  }
-
-   private _renderListAsync(): void {
-     // local enviroment
-     this.shareApi.fetchLists()
-       .then((response) => {
-         this._renderList(response.value);
-       });
-
-   }
-
-  private _renderList(item: ISPList[]): void {
-      let html: string = '';
-      item.forEach((item: ISPList) => {
-        html += `
-          <ul class="${styles.list}">
-            <li class="${styles.listItem}">
-              <span class="ms-font-1">${item.Title}</span>
-            </li>
-          </ul>`;
-      });
-
-      const listContainer: Element = this.domElement.querySelector('#spListContainer');
-      listContainer.innerHTML = html;
-  }
 
   public render(): void {
-    this.initialize();
     const element: React.ReactElement<ISharepointCandidatesProps > = React.createElement(
       SharepointCandidates,
       {

@@ -1,21 +1,4 @@
-import { ISPList, IContactList, ISPLists } from "./service.interface";
-
-export default class MockHttpClient {
-  private static _items: ISPList[] = [
-    {Title: 'Mock list', Id: '1' },
-    {Title: 'Mock list 2', Id: '2' },
-    {Title: 'Mock list 3', Id: '3' },
-    {Title: 'Mock list 4', Id: '4' },
-  ];
-
-
-  public static get(): Promise<ISPList[]> {
-    return new Promise<ISPList[]>((resolve) => {
-      resolve(MockHttpClient._items)
-    });
-  }
-}
-
+import { IContactList } from "./service.interface";
 
 export class MockHttpClientList {
   private static _items: IContactList[] = [
