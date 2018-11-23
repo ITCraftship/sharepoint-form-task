@@ -10,7 +10,7 @@ adding and displaying user contacts(list form + chart form).
 
 ## Checklist
  
-- Create a SharePoint service which will allow us to fetch and add new contacts to our SharePoint .
+- Create a SharePoint service which will allow us to fetch and add new contacts to our SharePoint
 
 When creating and accessing you SharePoint API
 the name of your contacts list is your Firstname and Lastname joined in CamelCase.
@@ -26,10 +26,15 @@ https://itcraftship.sharepoint.com/Lists/AnzeMatelic/AllItems.aspx
 ```
 
 
-- Create a react form which will submit a new contact to our SharePoint instance with the SharePoint service + Create select input which will fetch the data from the SharePoint API and displayed it on the form (SharePoint list URL ```/_api/web/Lists/GetByTitle('Company')/Items```)
+- Create a react form which will submit a new contact to our SharePoint instance with the SharePoint service + Create select input which will fetch the data from the SharePoint API and displayed it on the form (SharePoint list URL `/_api/web/Lists/GetByTitle('Company')/Items`):
+  - add validation of required fields before the user can click Save (1 point)
+  - add e-mail format validation (1 point)
+  - add salary number validation (1 point)
+  - add a dropdown with companies fetched from another list at `/_api/web/Lists/GetByTitle('Company')/Items` (1 points)
+  - save a contact once user clicks **Save** and the data is valid (1 points)
 
-- Create a react list which will display all out contacts data which we will fetch with our SharePoint API 
-- Lastly create a pie chart where you display the salary of the contacts (for example use chartjs library)
+- Create a react list which will display all added contacts data in the list fetched via SharePoint API (2 points)
+- Create a pie chart where you display the salary of the contacts (for example use chartjs library) (3 points)
 
 See a video with instructions here:
 [https://youtu.be/RZzw74KSp1I](https://youtu.be/RZzw74KSp1I)
