@@ -31,6 +31,9 @@ https://itcraftship.sharepoint.com/Lists/AnzeMatelic/AllItems.aspx
 - Create a react list which will display all out contacts data which we will fetch with our SharePoint API 
 - Lastly create a pie chart where you display the salary of the contacts (for example use chartjs library)
 
+See a video with instructions here:
+[https://youtu.be/RZzw74KSp1I](https://youtu.be/RZzw74KSp1I)
+
 ## Startup instructions:
 
 The project uses NPM and NodeJS version 8.9.0. Ideally user NVM which will select and fetch the correct version.
