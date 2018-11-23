@@ -19,8 +19,10 @@ Example
 ```
 // contact list name
 AnzeMatelic
-// Api Example
+// Api Example:
 _api/Web/Lists/GetByTitle('AnzeMatelic')/Items`
+// SharePoint URL example:
+https://itcraftship.sharepoint.com/Lists/AnzeMatelic/AllItems.aspx
 ```
 
 
@@ -51,10 +53,10 @@ npm start
 Navigate to:
 local version -> https://localhost:4321/temp/workbench.html:
 
-live version -> https://{sharepoint domain}.sharepoint.com/_layouts/15/workbench.aspx
+live version -> https://itcraftship.sharepoint.com/_layouts/15/workbench.aspx
 
 By default you already have a web component generate for sharepoint ```sharepointCandidates```
-the component is accesible unde ```src/webparts/sharepointCandidates```
+the component is accesible under ```src/webparts/sharepointCandidates```
 
 
 ## Resources used:
