@@ -13,7 +13,7 @@ adding and displaying user contacts(list form + chart form).
 - Create a SharePoint service which will allow us to fetch and add new contacts to our SharePoint
 
 When creating and accessing you SharePoint API
-the name of your contacts list is your Firstname and Lastname joined in CamelCase.
+the name of your contacts list is your Firstname and Lastname joined in CamelCase. You should only use ASCII encoding characters (ex. replace `ś` with `s`). You should have received your contacts list name by e-mail along with test invitation.
 
 Example
 ```
