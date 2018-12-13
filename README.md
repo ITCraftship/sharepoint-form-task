@@ -12,17 +12,16 @@ adding and displaying user contacts(list form + chart form).
  
 - Create a SharePoint service which will allow us to fetch and add new contacts to our SharePoint
 
-When creating and accessing you SharePoint API
-the name of your contacts list is your Firstname and Lastname joined in CamelCase. You should only use ASCII encoding characters (ex. replace `ś` with `s`). You should have received your contacts list name by e-mail along with test invitation.
+When creating and accessing you SharePoint API the name of your contacts list is a GUID, that was sent to you by e-mail along with test invitation.
 
 Example
 ```
 // contact list name
-AnzeMatelic
+7a65970dd8c842f697e33d659d241d10
 // Api Example:
-_api/Web/Lists/GetByTitle('AnzeMatelic')/Items`
+_api/Web/Lists/GetByTitle('7a65970dd8c842f697e33d659d241d10')/Items`
 // SharePoint URL example:
-https://itcraftship.sharepoint.com/Lists/AnzeMatelic/AllItems.aspx
+https://itcraftship.sharepoint.com/Lists/7a65970dd8c842f697e33d659d241d10/AllItems.aspx
 ```
 
 
